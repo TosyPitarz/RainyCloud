@@ -7,4 +7,4 @@ Stage 1
 
 STAGE 2
 
-<img width="300" alt="screen shot 2016-12-29 at 8 58 00 pm" src="https://cloud.githubusercontent.com/assets/15914563/21559018/894cb0e6-ce09-11e6-8b9e-81992dc6d58c.png">
+<img width="242" alt="screen shot 2016-12-29 at 9 02 02 pm" src="https://cloud.githubusercontent.com/assets/15914563/21559040/1c3fc4c4-ce0a-11e6-845b-172ae91947bd.png">
