@@ -9,6 +9,16 @@
 import UIKit
 import Alamofire
 
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(_ places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+
+
 class CurrentWeather {
     var _cityName: String!
     var _date: String!
@@ -56,7 +66,7 @@ class CurrentWeather {
         return _currentTemp
     }
     
-    func downloadWeatherDetails(completed: DownloadComplete) {
+    func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         //tell alamofire where to download from
         let currentUrl = URL(string: CURRENT_WEATHER_URL)!
         
@@ -83,14 +93,15 @@ class CurrentWeather {
                     if let currentTemperature = main["temp"]  as? Double {
                         let kelvinToCelsius = currentTemperature - 273.15
                         
-                        self._currentTemp = kelvinToCelsius
+                        self._currentTemp = kelvinToCelsius.roundTo(1)
                         print(self._currentTemp)
                     }
                 }
             }
+            completed()
         }
         
-        completed()
+        
         
         
     }

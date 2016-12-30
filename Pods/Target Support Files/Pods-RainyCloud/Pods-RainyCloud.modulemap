@@ -1,0 +1,6 @@
+framework module Pods_RainyCloud {
+  umbrella header "Pods-RainyCloud-umbrella.h"
+
+  export *
+  module * { export * }
+}
